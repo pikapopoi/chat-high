@@ -2,59 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Room - Home</title>
-    <meta name="description" content="Engage in conversations and connect with friends in a simple, user-friendly chat room.">
-    <meta property="og:title" content="Chat Room - Home">
-    <meta property="og:description" content="Engage in conversations and connect with friends in a simple, user-friendly chat room.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourwebsite.com">
-    
-    <!-- Link to the external stylesheet -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Bootstrap CSS for basic styling -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Chat Room</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="./index.html">Chat Room</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link text-white" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="chat.html">Chat</a>
+                        <a class="nav-link text-white" href="chat.html">Chat</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    
-    <!-- Hero Section -->
-    <div class="container hero-section">
-        <h2>Welcome to the Chat Room</h2>
-        <p>Engage in conversations and connect with friends in a simple, user-friendly environment.</p>
-        <a href="chat.html" class="btn btn-primary">Start Chatting Now</a>
-    </div>
-    
-    <!-- Footer -->
-    <footer>
-        <small>
-            <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a> <br>
-            © 2024 Harsh Rathi <!-- Copyright Notice -->
-        </small>
+
+    <main class="mt-5 pt-5">
+        <section class="intro text-center">
+            <div class="container">
+                <h2 class="display-4">Welcome to Our Chat Room</h2>
+                <p class="lead">Join the conversation now and connect with people from around the world. Our chat room is designed to be fast, secure, and easy to use. No login required!</p>
+                <a href="about.html" class="btn btn-primary btn-lg">Learn More</a>
+            </div>
+        </section>
+
+        <section class="features py-5">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="feature-box">
+                            <h3>Instant Messaging</h3>
+                            <p>Enjoy real-time conversations with anyone, anywhere.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="feature-box">
+                            <h3>Secure & Private</h3>
+                            <p>Your conversations are safe and private with our encrypted messaging system.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="feature-box">
+                            <h3>Easy to Use</h3>
+                            <p>Start chatting immediately—no login or sign-up required.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta text-center py-5">
+            <div class="container">
+                <h2 class="mb-4">Ready to Chat?</h2>
+                <a href="chat.html" class="btn btn-success btn-lg">Join Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-3 bg-primary shadow-sm">
+        <p class="text-white">&copy; 2024 Chat Room. All rights reserved.</p>
     </footer>
-    
-    <!-- Link to external JavaScript file -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,208 +1,148 @@
-/* General Styles */
+/* Global Styles */
 body {
-    background: linear-gradient(300deg, #5B99C2, #F9DBBA, #1A4870);
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F7FA;  /* Light gray background for the entire page */
+    color: #2D3E50;  /* Dark navy color for text */
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
-    transition: background-color 0.5s ease-in-out; /* Smooth background color transition */
-}
-
-.container {
-    width: 85%;
-    max-width: 1100px;
-    margin: auto;
+    overflow-x: hidden;
 }
 
 /* Navbar Styles */
-.navbar-dark {
-    background: linear-gradient(300deg, #5B99C2, #F9DBBA, #1A4870); /* Gradient background for navbar */
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #ffffff;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-    color: #F9DBBA; /* Highlight color on hover/focus */
+.navbar {
+    background-color: #4A90E2;  /* Primary blue color for navbar */
 }
 
 .navbar-brand {
     font-weight: bold;
-    color: #ffffff !important; /* Ensures brand color remains white */
+    color: #FFFFFF !important;  /* Ensure brand text is visible */
 }
 
-@media (min-width: 768px) {
-    .navbar-nav {
-        display: flex;
-        flex-direction: row;
-        position: static;
-        background-color: transparent;
-        box-shadow: none;
-    }
-
-    .nav-item {
-        margin: 0 12px;
-    }
-
-    .navbar-toggler {
-        display: none;
-    }
-}
-
-/* Hero Section */
-.hero-section {
-    padding: 70px 20px;
-    text-align: center;
-    background: linear-gradient(300deg, #5B99C2, #F9DBBA, #1A4870);
-    color: #ffffff;
-    border-radius: 12px;
-    margin-top: 30px;
-    flex-grow: 1;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Softer shadow */
-}
-
-.hero-section h2 {
-    font-size: 2.3rem;
-    margin-bottom: 25px;
-}
-
-.hero-section p {
-    font-size: 1.2rem;
-    margin-bottom: 35px;
-    line-height: 1.6;
-}
-
-.btn-primary {
-    background-color: #F9DBBA;
-    border: none;
-    color: #1A4870;
-    padding: 12px 28px;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-primary:hover {
-    background-color: #5B99C2;
-    transform: scale(1.08); /* Slightly larger on hover */
-}
-
-/* Chat Container Styles */
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(300deg, #5B99C2, #F9DBBA, #1A4870); /* Consistent background */
-    color: #ffffff;
-}
-
-.container {
-    width: 90%;
-    max-width: 800px; /* Adjusted for better layout */
-    margin: auto;
-    padding: 25px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-    border-radius: 12px;
-    background: rgba(0, 0, 0, 0.25); /* Semi-transparent container background */
-}
-
-/* Chat Box Enhancements */
-#chat-box {
-    height: 420px;
-    overflow-y: auto;
-    border: 1px solid #ffffff40;
-    border-radius: 12px;
-    padding: 12px;
-    scroll-behavior: smooth; /* Smooth scrolling for messages */
-}
-
-.message {
-    padding: 10px 14px;
-    margin: 6px 0;
-    background-color: #ffffff30; /* Semi-transparent messages */
-    border-radius: 8px;
-    font-size: 1.1rem;
-    color: #E6E6FA;
-    animation: fadeIn 0.6s ease-in-out; /* Fade-in effect for messages */
-}
-
-.message .name {
-    font-weight: bold;
-    color: #D3D3D3; /* Lighter color for names */
-    margin-right: 7px;
-}
-
-.message:nth-child(odd) {
-    background-color: #ffffff40; /* Slightly different shade for odd messages */
-}
-
-/* Time Stamp Style */
-.time-stamp {
-    display: block;
-    text-align: right;
-    font-size: 0.8rem;
-    color: #ffffff;
-}
-
-/* Input Form Styles */
-#chat-form {
-    display: flex;
-    margin-top: 12px;
-}
-
-#chat-form input[type="text"] {
-    flex: 1;
-    padding: 12px;
-    margin-right: 8px;
-    border: none;
-    border-radius: 6px;
-}
-
-#chat-form button {
-    padding: 12px 22px;
-    background-color: #5B99C2;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-#chat-form button:hover {
-    background-color: #F9DBBA;
-    transform: scale(1.12); /* Slight scale effect on hover */
-}
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(15px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Footer */
-footer {
-    padding: 25px 0;
-    text-align: center;
-    background-color: linear-gradient(300deg, #5B99C2, #F9DBBA, #1A4870);
-    color: #ffffff;
-    border-top: 2px solid #F9DBBA;
-    box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.4);
-    margin-top: 25px;
-}
-
-footer a {
-    color: #5B99C2;
-    text-decoration: none;
-    font-size: 1.2rem;
+.navbar-nav .nav-link {
+    color: #FFFFFF !important;  /* White text for navbar links */
     transition: color 0.3s ease;
 }
 
-footer a:hover {
-    color: #F9DBBA;
-    text-decoration: underline; /* Underline effect on hover */
+.navbar-nav .nav-link:hover {
+    color: #50E3C2 !important;  /* Teal color on hover for navbar links */
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    color: #2D3E50;  /* Dark navy color for main text */
+}
+
+.intro {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.intro h2 {
+    font-weight: 700;
+    color: #4A90E2;  /* Primary blue color for headings */
+}
+
+.intro p {
+    color: #2D3E50;  /* Dark navy color for paragraphs */
+}
+
+.features {
+    margin-bottom: 3rem;
+}
+
+.feature-box {
+    padding: 2rem;
+    background-color: #FFFFFF;  /* White background for feature boxes */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    color: #2D3E50;  /* Dark navy color for feature box text */
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    background-color: #B8E986;  /* Light green on hover */
+}
+
+.cta {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.cta h2 {
+    color: #4A90E2;  /* Primary blue color for headings */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4A90E2;  /* Primary blue background */
+    color: #FFFFFF;  /* White text color for contrast */
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Chat Box Styles */
+.chat-box {
+    height: 400px;
+    overflow-y: auto;
+    background-color: #FFFFFF;  /* White background for chat box */
+    color: #2D3E50;  /* Dark navy color for chat text */
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #E9F7FE;  /* Light blue background for messages */
+    border-radius: 4px;
+    text-align: left;
+}
+
+.message p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #2D3E50;  /* Ensure message text is dark navy */
+}
+
+/* Button Styles */
+.btn-primary, .btn-success {
+    background-color: #50E3C2;
+    border-color: #50E3C2;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover, .btn-success:hover {
+    background-color: #4A90E2;
+    border-color: #4A90E2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature-box {
+        padding: 1.5rem;
+    }
+
+    .cta h2 {
+        font-size: 1.75rem;
+    }
+
+    .chat-box {
+        height: 300px;
+    }
 }
