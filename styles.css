@@ -7,48 +7,9 @@ body {
     padding: 0;
 }
 
-/* Navbar */
-.navbar {
-    background: linear-gradient(300deg, #5B99C2, #F9DBBA, #1A4870);
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    flex-direction: column; /* Stack items vertically */
-}
-
-.navbar-brand {
-    font-weight: bold;
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem; /* Add space below the brand */
-}
-
-.navbar-menu {
-    display: flex;
-    gap: 2rem;
-    justify-content: center; /* Center the menu items */
-}
-
-.nav-link {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: #ffffff;
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
-    transform: scale(1.05);
-}
-
 /* Logo Style */
 .logo {
-    height: 60px;
+    height: 40px; /* Reduced height */
     width: auto;
     margin-right: 15px;
     vertical-align: middle;
@@ -57,11 +18,54 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #1A4870 0%, #5B99C2 50%, #F9DBBA 100%);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between brand and links */
+    flex-direction: row; /* Keep items in a row */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 5px 10px; /* Add padding to links */
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.2); /* Add background on hover */
+    border-radius: 5px;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+}
+
 /* Hamburger Menu for Small Screens */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    transition: transform 0.3s ease; /* Add animation to the hamburger */
 }
 
 .hamburger div {
@@ -78,12 +82,12 @@ body {
     flex-direction: column;
     gap: 1rem;
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 0;
-    background: linear-gradient(300deg, #5B99C2, #F9DBBA, #1A4870);
+    background: #1A4870;
     width: 100%;
     padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 768px) {
@@ -97,7 +101,7 @@ body {
     }
 
     .navbar {
-        align-items: flex-start; /* Align items to the start */
+        align-items: center;
     }
 
     .navbar-menu.active {
