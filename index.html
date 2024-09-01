@@ -14,6 +14,11 @@
                 <img src="logo.png" alt="Chat Room Logo" class="logo">
                 Chat Room
             </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <div class="navbar-menu">
                 <a class="nav-link active" href="index.html">Home</a>
                 <a class="nav-link" href="about.html">About</a>
@@ -71,19 +76,13 @@
             </div>
         </section>
 
-        <!-- Blog section -->
-        <section class="blog">
-            <div class="container">
-                <h2 class="section-title">Latest Updates</h2>
-                <article class="blog-post">
-                    <h3>Welcome to the Chat Room!</h3>
-                    <p>We're excited to have you here. Stay tuned for more updates and features that we’re working on to enhance your experience.</p>
-                </article>
-                <article class="blog-post">
-                    <h3>Security Updates</h3>
-                    <p>Our commitment to your privacy and security remains our top priority. Learn more about the latest updates we've implemented.</p>
-                </article>
-            </div>
+        <!-- Feedback Section -->
+        <section class="feedback">
+            <h2>Feedback</h2>
+            <form id="feedbackForm">
+                <textarea placeholder="Share your thoughts..." required></textarea>
+                <button type="submit" class="btn-primary">Submit</button>
+            </form>
         </section>
     </main>
 
@@ -94,5 +93,10 @@
 
     <!-- Custom JS -->
     <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.navbar-menu').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

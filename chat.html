@@ -14,6 +14,11 @@
                 <img src="logo.png" alt="Chat Room Logo" class="logo">
                 Chat Room
             </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <div class="navbar-menu">
                 <a class="nav-link active" href="index.html">Home</a>
                 <a class="nav-link" href="about.html">About</a>
@@ -43,6 +48,12 @@
                 <button type="submit" class="btn-success">Send</button>
             </form>
         </section>
+
+        <!-- Online Users Section -->
+        <section class="online-users" id="onlineUsers">
+            <h3>Active Users</h3>
+            <ul id="userList"></ul>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -52,5 +63,10 @@
 
     <!-- Custom JS -->
     <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.navbar-menu').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

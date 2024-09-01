@@ -2,6 +2,24 @@
 let userSet = new Set();
 let activeUser = '';
 
+// Function to sanitize user input
+function sanitize(input) {
+    const element = document.createElement('div');
+    element.innerText = input;
+    return element.innerHTML;
+}
+
+// Function to update the active user list
+function updateUserList() {
+    const userList = document.getElementById('userList');
+    userList.innerHTML = '';
+    userSet.forEach(user => {
+        const li = document.createElement('li');
+        li.textContent = user;
+        userList.appendChild(li);
+    });
+}
+
 // Ensure DOM is fully loaded before executing the script
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -16,9 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             userSet.add(username);
             activeUser = username;
+            document.getElementById('usernameError').textContent = ''; // Clear error message
             document.getElementById('usernameSection').style.display = 'none';
             document.getElementById('chatSection').style.display = 'block';
-            document.getElementById('chatBox').innerHTML += `<div class="message"><p><strong>System:</strong> ${activeUser} joined the chat.</p></div>`;
+            document.getElementById('chatBox').innerHTML += `<div class="message"><p><strong>System:</strong> ${sanitize(activeUser)} joined the chat.</p></div>`;
+            updateUserList(); // Update the list of active users
         }
     };
 
@@ -30,12 +50,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Add message if the input is not empty
         if (messageInput.value.trim() !== '') {
+            const timestamp = new Date().toLocaleTimeString();
             const messageElement = document.createElement('div');
             messageElement.className = 'message';
-            messageElement.innerHTML = `<p><strong>${activeUser}:</strong> ${messageInput.value}</p>`;
+            messageElement.innerHTML = `<p><strong>${sanitize(activeUser)}:</strong> ${sanitize(messageInput.value)} <span class="timestamp">${timestamp}</span></p>`;
             chatContainer.appendChild(messageElement);
             messageInput.value = '';
-            chatContainer.scrollTop = chatContainer.scrollHeight;
+            chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to the bottom
         }
+    };
+
+    // Handle the submission of the feedback form
+    document.getElementById('feedbackForm').onsubmit = function(event) {
+        event.preventDefault();
+        alert('Thank you for your feedback!');
+        document.getElementById('feedbackForm').reset(); // Reset the form after submission
     };
 });
